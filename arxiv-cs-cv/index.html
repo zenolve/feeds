@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>arXiv Computer Vision Papers API - Zenolve Feeds</title><meta name="description" content="The latest arXiv cs.CV (computer vision) preprints as structured JSON - title, authors, and subject."><link rel="canonical" href="https://feeds.zenolve.com/arxiv-cs-cv/"><meta property="og:title" content="arXiv Computer Vision Papers API"><meta property="og:description" content="The latest arXiv cs.CV (computer vision) preprints as structured JSON - title, authors, and subject."><meta property="og:type" content="website"><style>
+:root{--bg:#ffffff;--fg:#111418;--muted:#5b6570;--line:#e6e8eb;--card:#f7f8fa;--code-bg:#0d1117;--code-fg:#e6edf3;--accent:#2874a6;--radius:12px;--max:920px}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1216;--fg:#e8ebee;--muted:#9aa4ae;--line:#242a31;--card:#161b1d;--code-bg:#0b0e12;--code-fg:#e6edf3}}
+:root[data-theme="dark"]{--bg:#0f1216;--fg:#e8ebee;--muted:#9aa4ae;--line:#242a31;--card:#161b1d;--code-bg:#0b0e12;--code-fg:#e6edf3}
+:root[data-theme="light"]{--bg:#ffffff;--fg:#111418;--muted:#5b6570;--line:#e6e8eb;--card:#f7f8fa;--code-bg:#0d1117;--code-fg:#e6edf3;--accent:#2874a6;--radius:12px;--max:920px}
+
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:700;letter-spacing:-.01em;color:var(--fg);font-size:18px}
+.brand b{color:var(--accent)}
+.nav a{color:var(--muted);font-size:14px;margin-left:18px}
+.hero{padding:54px 0 30px}
+.eyebrow{color:var(--accent);font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+h1{font-size:40px;line-height:1.12;letter-spacing:-.02em;margin:.35em 0 .3em;text-wrap:balance}
+.lede{font-size:19px;color:var(--muted);max-width:44em;margin:0}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 6px}
+.btn{display:inline-block;padding:11px 18px;border-radius:10px;font-weight:600;font-size:15px}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{border:1px solid var(--line);color:var(--fg)}
+.meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pill{font-size:12.5px;color:var(--muted);background:var(--card);border:1px solid var(--line);
+padding:5px 11px;border-radius:999px}
+section{padding:30px 0;border-top:1px solid var(--line)}
+h2{font-size:23px;letter-spacing:-.01em;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 18px}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);font-weight:600}
+td code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
+td.k code{color:var(--accent);font-weight:600}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}
+.scroll table th,.scroll table td{white-space:nowrap}
+.scroll table td{max-width:34em;overflow:hidden;text-overflow:ellipsis}
+.tag{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--muted);
+font-size:12px;padding:2px 8px;border-radius:6px}
+.codewrap{margin:14px 0}
+.codewrap .lang{font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:600}
+pre{background:var(--code-bg);color:var(--code-fg);padding:16px 18px;border-radius:var(--radius);
+overflow-x:auto;margin:0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+font-size:13px;line-height:1.55}
+.grid{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:640px){.grid{grid-template-columns:1fr}h1{font-size:32px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.card h3{margin:0 0 4px;font-size:15px}.card p{margin:0;color:var(--muted);font-size:14px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .big{font-size:34px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.price .per{color:var(--muted)}
+details{border:1px solid var(--line);border-radius:10px;padding:2px 16px;margin:10px 0;background:var(--card)}
+details summary{cursor:pointer;font-weight:600;padding:12px 0;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+ ";color:var(--accent);font-weight:700}
+details[open] summary::before{content:"\2212 "}
+details .a{color:var(--muted);padding:0 0 14px}
+.note{font-size:13px;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);margin-top:20px;padding:26px 0;color:var(--muted);font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.livebadge{display:inline-block;font-size:12px;font-weight:600;color:#0a7d33;background:#e7f7ec;
+border:1px solid #bfe6cc;border-radius:999px;padding:3px 10px}
+@media (prefers-color-scheme:dark){.livebadge{color:#65d68a;background:#0e2317;border-color:#1d4a2d}}
+.cat-head{margin:34px 0 12px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "arXiv Computer Vision Papers API", "description": "cs.CV is where new computer-vision research lands first. This feed scrapes arXiv's recent cs.CV listings on demand and returns each preprint as structured JSON.", "url": "https://feeds.zenolve.com/arxiv-cs-cv/", "creator": {"@type": "Organization", "name": "Zenolve", "url": "https://feeds.zenolve.com"}, "isBasedOn": "https://arxiv.org/list/cs.CV/recent", "keywords": ["arXiv", "cs.CV", "computer vision", "preprints", "research feed", "API"], "variableMeasured": ["title", "authors", "subject"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "arXiv Computer Vision Papers API", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any (HTTP API)", "url": "https://feeds.zenolve.com/arxiv-cs-cv/", "offers": {"@type": "Offer", "price": "0.004", "priceCurrency": "USD", "description": "Pay per result, per record returned"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Doesn't arXiv have a free API?", "acceptedAnswer": {"@type": "Answer", "text": "Yes - but it is rate-limited, XML-based, and query-oriented. This feed returns the recent cs.CV listing as clean JSON at $0.004 per record."}}, {"@type": "Question", "name": "How current is it?", "acceptedAnswer": {"@type": "Answer", "text": "Live - each call scrapes the recent page, updated every arXiv announcement cycle."}}, {"@type": "Question", "name": "Can I use other categories?", "acceptedAnswer": {"@type": "Answer", "text": "Yes - pass any arXiv listing URL as input, or use the sibling cs.LG and cs.CL feeds."}}, {"@type": "Question", "name": "What does each record include?", "acceptedAnswer": {"@type": "Answer", "text": "title, first author, and the primary subject tag."}}, {"@type": "Question", "name": "Can an AI agent call this directly?", "acceptedAnswer": {"@type": "Answer", "text": "Yes - exposed as an MCP tool for native agent calls."}}]}</script></head><body><header class="site"><div class="wrap"><a class="brand" href="/">Zenolve <b>Feeds</b></a><nav class="nav"><a href="/">All feeds</a><a href="https://apify.com/zenolvepro" target="_blank" rel="noopener">Apify Store</a></nav></div></header><main class="wrap"><div class="hero"><div class="eyebrow">AI research data</div><h1>arXiv Computer Vision Papers API</h1><p class="lede">The latest arXiv cs.CV (computer vision) preprints as structured JSON - title, authors, and subject.</p><div class="cta"><a class="btn primary" href="https://apify.com/zenolvepro/arxiv-cs-cv" target="_blank" rel="noopener">Get the API &rarr;</a><a class="btn ghost" href="https://arxiv.org/list/cs.CV/recent" target="_blank" rel="noopener">Official source</a></div><div class="meta-row"><span class="pill">Source: arXiv (Cornell University)</span><span class="pill">$0.004 / record</span><span class="pill">JSON &middot; CSV &middot; Excel</span><span class="pill">MCP tool for AI agents</span></div></div><section><h2>What this feed does</h2><p class="sub">cs.CV is where new computer-vision research lands first. This feed scrapes arXiv&#x27;s recent cs.CV listings on demand and returns each preprint as structured JSON.</p><div class="grid"><div class="card"><h3>Structured, not scraped-by-you</h3><p>Clean JSON with stable field names - no HTML parsing, no selectors to maintain when the site changes.</p></div><div class="card"><h3>Pay only for what you pull</h3><p>No subscription. $0.004 per record via Apify&#x27;s metered billing; a typical pull is cents.</p></div><div class="card"><h3>Human + agent ready</h3><p>Call it from cURL, Python, or JS - or hand it to an AI agent as an MCP tool.</p></div><div class="card"><h3>Always the latest</h3><p>Scraped from the official source on every run, so you never ship stale data.</p></div></div></section><section><h2>What each record contains</h2><p class="sub">Every result is a JSON object with these fields.</p><div class="scroll"><table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td class="k"><code>title</code></td><td><span class="tag">string</span></td><td>Preprint title.</td></tr><tr><td class="k"><code>authors</code></td><td><span class="tag">string</span></td><td>First listed author.</td></tr><tr><td class="k"><code>subject</code></td><td><span class="tag">string</span></td><td>Primary arXiv subject classification.</td></tr></tbody></table></div></section><section><h2>Live sample</h2><p class="sub">The most recent records, straight from the feed. <span class="livebadge">Live sample - fetched at build time</span></p><div class="scroll"><table><thead><tr><th>title</th><th>authors</th><th>subject</th></tr></thead><tbody><tr><td>DermDepth: Toward Monocular Metric Scale 3D Reconstruction Models for Dermatology</td><td>Héctor Carrión</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>X-Lens: Real-Time Metric Depth Estimation with Heterogeneous Cameras</td><td>Heng Zhou</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>Controllable Generation of Diverse Dermatological Imagery for Fair and Efficient Malignancy Classification</td><td>Héctor Carrión</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>ViCo3D: Empowering LiDAR-based Collaborative 3D Object Detection with Vision Foundation Models</td><td>Haojie Ren</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>Point Tracking in Surgery--The 2025 Surgical Tattoos in Infrared Challenge (STIRC2025)</td><td>Adam Schmidt</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>Domain-Incremental Remote Sensing Change Detection via Difference-Guided Adaptation and Frequency-Decoupled Distillation</td><td>Daifeng Peng</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>Open-KNEAD: Knowledge-grounded Nutrition Estimation via Agentic Decomposition</td><td>Bruce Coburn</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr><tr><td>Rank-1 Identity Consensus Predicts Gallery Enrollment in 1:N Face Matching More Accurately than Score Thresholding</td><td>Gabriella Pangelinan</td><td>Computer Vision and Pattern Recognition (cs.CV)</td></tr></tbody></table></div></section><section><h2>Call it in one line</h2><p class="sub">Runs the actor and returns the dataset. Swap in your Apify token.</p><div class="codewrap"><div class="lang">cURL - one call, JSON back</div><pre>curl &quot;https://api.apify.com/v2/acts/zenolvepro~arxiv-cs-cv/run-sync-get-dataset-items?token=YOUR_APIFY_TOKEN&quot;</pre></div><div class="grid"><div class="codewrap"><div class="lang">Python</div><pre>from apify_client import ApifyClient
+client = ApifyClient(&quot;YOUR_APIFY_TOKEN&quot;)
+run = client.actor(&quot;zenolvepro/arxiv-cs-cv&quot;).call()
+for row in client.dataset(run[&quot;defaultDatasetId&quot;]).iterate_items():
+    print(row)</pre></div><div class="codewrap"><div class="lang">JavaScript / Node</div><pre>import { ApifyClient } from &#x27;apify-client&#x27;;
+const client = new ApifyClient({ token: &#x27;YOUR_APIFY_TOKEN&#x27; });
+const run = await client.actor(&#x27;zenolvepro/arxiv-cs-cv&#x27;).call();
+const { items } = await client.dataset(run.defaultDatasetId).listItems();
+console.log(items);</pre></div></div><div class="codewrap"><div class="lang">AI agents - Model Context Protocol (MCP)</div><pre>https://mcp.apify.com?tools=zenolvepro/arxiv-cs-cv</pre><p class="note">Point any MCP-capable agent at this endpoint and the feed becomes a callable tool.</p></div></section><section><h2>Who uses it</h2><p class="sub">Computer-vision labs, research-monitoring tools, and CV-product teams use it for monitoring, benchmarking, alerting, and enrichment.</p></section><section><h2>Pricing</h2><div class="price"><span class="big">$0.004</span><span class="per">per record returned &middot; pay-per-result, no subscription</span></div><p class="note" style="margin-top:10px">Billed through Apify. A tiny per-run start fee ($0.00005) applies. Only pay for records you actually pull.</p></section><section><h2>FAQ</h2><details><summary>Doesn&#x27;t arXiv have a free API?</summary><div class="a">Yes - but it is rate-limited, XML-based, and query-oriented. This feed returns the recent cs.CV listing as clean JSON at $0.004 per record.</div></details><details><summary>How current is it?</summary><div class="a">Live - each call scrapes the recent page, updated every arXiv announcement cycle.</div></details><details><summary>Can I use other categories?</summary><div class="a">Yes - pass any arXiv listing URL as input, or use the sibling cs.LG and cs.CL feeds.</div></details><details><summary>What does each record include?</summary><div class="a">title, first author, and the primary subject tag.</div></details><details><summary>Can an AI agent call this directly?</summary><div class="a">Yes - exposed as an MCP tool for native agent calls.</div></details></section></main><footer class="site"><div class="wrap"><span>Compiled from official public sources by <b>Zenolve</b>. Not legal advice.</span><span><a href="https://apify.com/zenolvepro/arxiv-cs-cv" target="_blank" rel="noopener">Run on Apify</a></span></div></footer></body></html>
